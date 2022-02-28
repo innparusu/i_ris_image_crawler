@@ -83,7 +83,7 @@ def main
   yesterday = today.prev_day
   dir_path = ENV['IMAGE_DOWNLOAD_DIR_PATH']
 
-  %w[i-ris nijimasu].each do |list_name|
+  %w[i-ris nijimasu others].each do |list_name|
     ListImageCrawler.new(client: client, list_name: list_name, range: yesterday..today, dir_path: dir_path).crawl
   end
 end
